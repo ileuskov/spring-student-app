@@ -11,28 +11,26 @@ import java.util.List;
 public class StudentConfig {
 
     @Bean
-CommandLineRunner commandLineRunner(
-        StudentRepository repository) {
-    return args -> {
-               Student Ivan =  new Student(
-                        1L,
-                        "Ivan",
-                        "ivan.leuskov@gmail.com",
-                        LocalDate.of(1972, 10, 17),
-                        50
-                );
+    CommandLineRunner commandLineRunner(
+            StudentRepository repository) {
+        return args -> {
+            Student Ivan = new Student(
+                    1L,
+                    "Ivan",
+                    "ivan.leuskov@gmail.com",
+                    LocalDate.of(1972, 10, 17)
+                    );
 
-        Student John =  new Student(
-                "John",
-                "John.johnson@gmail.com",
-                LocalDate.of(1982, 11, 15),
-                40
-        );
+            Student John = new Student(
+                    "John",
+                    "John.johnson@gmail.com",
+                    LocalDate.of(1982, 11, 15)
+                    );
 
-        //saves our students to the database
-        repository.saveAll(
-                List.of(Ivan, John)
-        );
-    };
-}
+            //saves our students to the database
+            repository.saveAll(
+                    List.of(Ivan, John)
+            );
+        };
+    }
 }
