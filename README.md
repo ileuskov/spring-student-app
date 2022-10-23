@@ -5,7 +5,7 @@ Simple spring + postgreSQL backend app with API, Service and Data Access layer
 1. manage postgreSQL DB with http requests (GET, POST, PUT, DELETE)
 
 # Technologies used
-1. Spring Boot
+1. Java 17 + Spring Boot
 2. PostgreSQL Database
 3. Postman to test api calls
 
